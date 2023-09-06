@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Creating variables */
+:root {
+  --blue: rgb(20, 20, 92);
+}
+/* section Desing */
+.quiz-app-section {
+  width: 100%;
+}
+.quiz-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgba(9, 9, 51, 0.897);
+}
+.quiz-box {
+  background-color: #fff;
+  width: 70%;
+  min-height: 50%;
+  padding: 0 5% 0 5%;
+  border-radius: 1%;
+}
+.title {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 12vh;
+}
+.title h2 {
+  color: var(--blue);
+}
+/* Line under title class */
+.title h2::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 85%;
+  background-color: rgba(20, 20, 92, 0.692);
+}
+
+/* the question desing */
+.questions h4 {
+  color: var(--blue);
+}
+
+/* multi-choices desing */
+.multi-choice {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin: 3%;
+}
+.multi-choice button {
+  color: var(--blue);
+  border: 1px var(--blue) solid;
+  border-radius: 5px;
+  margin-bottom: 3%;
+  padding: 1% 1% 1% 2%;
+  text-align: start;
+  cursor: pointer;
+}
+.multi-choice button:disabled{
+  cursor: no-drop;
+}
+/* next button desing */
+.next-question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.next-question button{
+    padding: 1%;
+    min-width: 20%;
+    border: none;
+    background-color: var(--blue);
+    color: #fff;
+    box-shadow: 0px 1px 1px var(--blue);
+    margin: 3% 0 5% 0;
+    border-radius: 3px;
+    font-size: border;
+    cursor: pointer;
+}
+
+/* Correct and incorrect answers */
+.correct{
+  background-color: rgba(75, 218, 75, 0.863);
+  border: none;
+}
+.incorrect{
+  background-color: rgba(238, 62, 62, 0.884);
+  border: none;
+}
